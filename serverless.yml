@@ -33,6 +33,16 @@ functions:
           method: post
           cors: true
 
+plugins:
+  - serverless-domain-manager
+
+custom:
+  customDomain:
+    domainName: demo.serverlessperf.com
+    endpointType: regional
+    certificateRegion: ${opt:region}
+    createRoute53Record: false
+
 resources:
   Resources:
     KeyValuesDynamoDBTable:
