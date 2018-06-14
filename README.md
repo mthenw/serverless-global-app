@@ -20,6 +20,9 @@ npm install --save-dev serverless-domain-manager
 serverless.yaml
 
 ```
+plugins:
+  - serverless-domain-manager
+
 custom:
   customDomain:
     domainName: demo.serverlessperf.com
